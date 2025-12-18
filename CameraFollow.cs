@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
    
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");//ÕÒµ½Íæ¼ÒµÄ±êÇ©¶ÔÏó
+        player = GameObject.FindGameObjectWithTag("Player");//æ‰¾åˆ°ç©å®¶çš„æ ‡ç­¾å¯¹è±¡
 
     }
     private void Start()
@@ -20,8 +20,8 @@ public class CameraFollow : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //Í¨¹ıFixedUpdateº¯ÊıµÄÃ¿Ö¡µ÷ÓÃµÄĞÔÖÊ£¬Í¨¹ı²åÖµº¯ÊıLerpÊµÏÖÏà»úÆ½»¬¸úËæÍæ¼Ò
-        //µ± float  t>1 Ê±£¬Ö±½Óµ½´ïÄ¿±êÎ»ÖÃ,Í¨¹ıFixedUpdateµÄÃ¿Ö¡µ÷ÓÃ£¬ÊµÏÖ tËæÊ±¼äµÄ±ä»¯
+        //é€šè¿‡FixedUpdateå‡½æ•°çš„æ¯å¸§è°ƒç”¨çš„æ€§è´¨ï¼Œé€šè¿‡æ’å€¼å‡½æ•°Lerpå®ç°ç›¸æœºå¹³æ»‘è·Ÿéšç©å®¶
+        //å½“ float  t>1 æ—¶ï¼Œç›´æ¥åˆ°è¾¾ç›®æ ‡ä½ç½®,é€šè¿‡FixedUpdateçš„æ¯å¸§è°ƒç”¨ï¼Œå®ç° téšæ—¶é—´çš„å˜åŒ–
         transform.position = Vector3.Lerp(transform.position, player.transform.position+offset,Smoothing*Time.deltaTime);
     }
 
